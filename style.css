@@ -1,0 +1,172 @@
+@font-face {
+  font-family: iranyekan;
+  src: url("font/IRANYekanXFaNum-Regular.ttf");
+}
+
+body {
+  box-sizing: border-box;
+  font-family: iranyekan, sans-serif;
+  background-color: #f8f9fa;
+  margin: auto;
+  padding: 80px;
+  color: #333;
+  font-family: iranyekan sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: normal;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.selection-section {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  appearance: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #666;
+  box-sizing: border-box;
+}
+
+.arrow {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #999;
+  font-size: 10px;
+}
+
+.custom-select:focus {
+  border-bottom: 1px solid #5d95d2;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  background-color: #ffffff;
+  color: #666;
+  box-sizing: border-box;
+}
+
+.custom-input:focus {
+  border-bottom: 1px solid #007bff;
+}
+
+.custom-input::placeholder {
+  color: #999;
+}
+
+/* مدیریت دکمه‌ها */
+.action-bar {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.btn-save,
+.btn-add {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: white;
+}
+
+.btn-save {
+  background-color: #5d95d2;
+}
+.btn-save:hover {
+  background-color: #5c63c9;
+}
+
+.btn-add {
+  background-color: #28a745;
+}
+.btn-add:hover {
+  background-color: #218838;
+}
+
+#fileName {
+  display: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #007bff;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  border: 1px dashed #ccc;
+  word-break: break-all;
+}
+
+/* جدول */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.data-table th {
+  background-color: #fcfcfc;
+  color: #777;
+  font-weight: normal;
+}
+
+.no-data {
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    padding: 15px;
+  }
+  .data-table {
+    font-size: 12px;
+  }
+}

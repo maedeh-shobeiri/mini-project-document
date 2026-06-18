@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/icon.png">
+        <title>پنل حسابداری</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <!-- بخش عنوان -->
+            <h1 class="title">سند &raquo; ایجاد سند حسابداری</h1>
+            <button class="btn-save" id="btn-save" onclick="save()">ذخیره</button>
+            <br>
+            <br>
+
+            <div class="selection-section">
+                <!-- انتخاب واحد -->
+                <div class="select-wrapper">
+                    <select class="custom-select" id="unitRegister">
+                        <option value disabled selected>انتخاب واحد ثبت</option>
+                        <option value="واحد مرکزی">واحد مرکزی</option>
+                        <option value="شعبه شماره 1">شعبه شماره 1</option>
+                        <option value="شعبه شماره 2">شعبه شماره 2</option>
+                        <option value="انبار مرکزی">انبار مرکزی</option>
+                        <option value="دفتر فروش">دفتر فروش</option>
+                    </select>
+                    <span class="arrow">▼</span>
+                </div>
+
+                <!-- انتخاب نوع سند -->
+                <div class="select-wrapper">
+                    <select class="custom-select" id="documentType">
+                        <option value disabled selected>نوع سند</option>
+                        <option value="سند حسابداری">سند حسابداری</option>
+                        <option value="سند افتتاحیه">سند افتتاحیه</option>
+                        <option value="سند اختتامیه">سند اختتامیه</option>
+                        <option value="سند حقوق و دستمزد">سند حقوق و دستمزد</option>
+                        <option value="سند گردش کالا">سند گردش کالا</option>
+                    </select>
+                    <span class="arrow">▼</span>
+                </div>
+            </div>
+
+            <!-- بخش شماره عطف -->
+            <div class="selection-section">
+                <input type="text" id="refNumber" class="custom-input"
+                    placeholder="شماره عطف">
+            </div>
+
+            <!-- بخش شرح -->
+            <div class="selection-section">
+                <input type="text" id="docDescription" class="custom-input"
+                    placeholder="شرح سند">
+            </div>
+
+            <!-- بخش عملیات -->
+            <div class="action-bar" style="margin-top: 20px;">
+                <button class="btn-add" id="btn-add">افزودن ردیف سند</button>
+                <input type="file" id="fileInput" style="display: none;">
+                <span id="fileName"></span>
+            </div>
+
+            <!-- جدول داده‌ها -->
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ردیف</th>
+                        <th>حساب</th>
+                        <th>شرح</th>
+                        <th>بدهکار/بستانکار</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr class="no-data">
+                        <td colspan="4">No records to display</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- لود jsPDF -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <!-- لود AutoTable -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+        <!-- کتابخانه XLSX -->
+        <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html>
